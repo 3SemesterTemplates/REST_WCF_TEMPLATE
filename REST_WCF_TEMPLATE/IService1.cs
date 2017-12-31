@@ -12,8 +12,7 @@ namespace REST_WCF_TEMPLATE
     [ServiceContract]
     public interface IService1
     {
-        [OperationContract]
-        int getallstuff();
+        
     }
 
 }
