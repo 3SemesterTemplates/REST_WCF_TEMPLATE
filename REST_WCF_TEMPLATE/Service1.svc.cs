@@ -24,11 +24,7 @@ namespace REST_WCF_TEMPLATE
         };
         #endregion
 
-        #region CONNECTION STRING
-        //Connection string
-        private static string connectingString =
-               "Server=tcp:natascha.database.windows.net,1433;Initial Catalog=School;Persist Security Info=False;User ID=nataschajakobsen;Password=Roskilde4000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        #endregion
+        
 
         #region POST U. DB
         public void AddMovie(Movies newMovie)
