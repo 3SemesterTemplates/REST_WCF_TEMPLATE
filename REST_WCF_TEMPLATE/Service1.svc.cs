@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web.SessionState;
+
 
 namespace REST_WCF_TEMPLATE
 {
@@ -16,9 +18,9 @@ namespace REST_WCF_TEMPLATE
         #region STATIC LIST
         public static List<Movies> ListOfMoves { get; } = new List<Movies>
         {
-            new Movies {Id = 1, Titel = "Far til 40", Rating= 4},
-            new Movies {Id = 2, Titel = "Halløj Her", Rating= 3},
-            new Movies {Id = 3, Titel = "Star Wars", Rating= 5}
+            new Movies(1,"Peter Plys", 3.4),
+            new Movies(2,"Far til 40", 4),
+            new Movies(3,"Star Wars", 5),
         };
         #endregion
 

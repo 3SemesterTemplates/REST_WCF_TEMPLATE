@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace REST_WCF_TEMPLATE
+namespace ModelLibrary
 {
     public class Movies
     {
         public int Id { get; set; }
-        public String Titel { get; set; }
+        public string Titel { get; set; }
         public double Rating { get; set; }
 
-
-        // Altid have en default constructor
         public Movies()
         {
+
         }
 
         public Movies(int id, string titel, double rating)
         {
             Id = id;
-            Titel = titel;
+            Titel = Titel;
             Rating = rating;
+
         }
 
         public override string ToString()
         {
-
+            //return $"Id: {Id}, Titel: {Titel}, Rating: {Rating}";
             return $"{nameof(Id)}: {Id}, {nameof(Titel)}: {Titel}, {nameof(Rating)}: {Rating}";
         }
     }
