@@ -12,7 +12,57 @@ namespace REST_WCF_TEMPLATE
     [ServiceContract]
     public interface IService1
     {
-        
+        //HTTP
+        //Get all
+        [OperationContract]
+        [WebInvoke(
+                Method = "GET",
+                ResponseFormat = WebMessageFormat.Json,
+                UriTemplate = "movies")
+        ]
+        List<Movies> GetMovies();
+
+
+        //Get by id
+        [WebInvoke(
+                Method = "GET",
+                ResponseFormat = WebMessageFormat.Json,
+                UriTemplate = "movie/{id}")
+        ]
+        Movies GetOneMovie(String id);
+
+        //Post/create
+        [WebInvoke(
+                Method = "POST",
+                RequestFormat = WebMessageFormat.Json,
+                //ResponseFormat = WebMessageFormat.Json,
+                UriTemplate = "movies")
+        ]
+        void AddMovie(Movies newMovie);
+
+        //Delete
+        [WebInvoke(
+                Method = "DELETE",
+                ResponseFormat = WebMessageFormat.Json,
+                UriTemplate = "movies?id={id}")
+        ]
+        Movies DeleteMovie(int id);
+
+        //Update/Put
+        [WebInvoke(
+               Method = "PUT",
+               RequestFormat = WebMessageFormat.Json,
+               ResponseFormat = WebMessageFormat.Json,
+               UriTemplate = "movies")
+       ]
+        Movies UpdateMovie(Movies myMovie);
+
+
+        //HTTP Med Database
+        //Get all
+        //Post/create
+        //Delete
+        //Update/Put
     }
 
 }
