@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using System.Web.SessionState;
 
+//EKSAMEN
 
 namespace REST_WCF_TEMPLATE
 {

@@ -10,18 +10,21 @@ using System.Text;
 namespace REST_WCF_TEMPLATE
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+
+
+    //Service contract specificerer hvilke operationer/metoder/funktioner som servicen understøtter.
     [ServiceContract]
     public interface IService1
     {
-        //HTTP
+        
         //Get all
-        [OperationContract]
+        [OperationContract] //Operation Contract. Web service metode
         [WebInvoke(
-                Method = "GET",
+                Method = "GET", //http kald get
                 ResponseFormat = WebMessageFormat.Json,
                 UriTemplate = "movies")
         ]
-        List<Movies> GetMovies();
+        List<Movies> GetMovies(); //liste som jeg kalder GetMovies af typen Movies
 
 
         //Get by id
@@ -57,13 +60,6 @@ namespace REST_WCF_TEMPLATE
                UriTemplate = "movies")
        ]
         Movies UpdateMovie(Movies myMovie);
-
-
-        //HTTP Med Database
-        //Get all
-        //Post/create
-        //Delete
-        //Update/Put
     }
 
 }
