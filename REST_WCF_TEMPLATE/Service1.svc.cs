@@ -17,7 +17,7 @@ namespace REST_WCF_TEMPLATE
     public class Service1 : IService1
     {
         #region STATIC LIST
-        public static List<Movies> ListOfMoves { get; } = new List<Movies>
+        public static List<Movies> ListOfMoves { get; } = new List<Movies> //statisk liste af typen movies. 
         {
             new Movies(1,"Peter Plys", 3.4),
             new Movies(2,"Far til 40", 4),
@@ -37,7 +37,7 @@ namespace REST_WCF_TEMPLATE
         #region DELETE U. DB
         public Movies DeleteMovie(int id)
         {
-            var deleteMovie = GetOneMovie(id.ToString());
+            var deleteMovie = GetOneMovie(id.ToString()); //skal bruge en string id som parametrer, tostring da id er af typen int. 
             if (deleteMovie != null)
             {
                 ListOfMoves.Remove(deleteMovie);
